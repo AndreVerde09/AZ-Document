@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table {
+        border: 1px solid #333;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      .bold {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: bold;
+        font-family: "Calibri";
+        padding: 0 10px;
+      }
+      .regular {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: normal;
+        font-family: "Calibri";
+        padding: 0 10px;
+      }
+      .no-margin {
+        margin: 0;
+      }
+      .no-padding {
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div
+      style="
+        display: flex;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        justify-content: space-between;
+      "
+    >
+      <div style="width: 20%">
+        <p
+          class="bold"
+          style="border-bottom: 1px solid #6e6e6e; margin-top: 30px"
+        >
+          Valutazione
+        </p>
+      </div>
+      <div style="width: 70%">
+        <table style="width: 100%; border: none !important">
+          <tbody>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Tipologia edilizia</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">Box</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Valore minimo</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">4.920,00 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Valore massimo</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">7.200,00 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  Valore riferimento compravendita
+                </p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">6.060,00 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Valore riferimento locazione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">23,00 €</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
