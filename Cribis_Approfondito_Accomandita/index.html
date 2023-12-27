@@ -97,8 +97,8 @@
 
       table {
         border: 1px solid #333;
-        border-spacing: 0;
-        border-collapse: collapse;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
       }
       thead {
         display: table-row-group;
@@ -116,7 +116,7 @@
       }
 
       .padding_td_th {
-        padding: 5px !important;
+        padding: 3px !important;
       }
 
       /* NB */
@@ -162,8 +162,19 @@
         line-height: 18px;
       }
 
+      .padding_td_th > p {
+        font-size: 10pt !important;
+      }
+
       a > div > div > p {
         margin: 7px !important;
+      }
+
+      .table_noborder > td {
+        border: 1px solid #6e6e6e;
+        border-bottom: none !important;
+        border-top: none !important;
+        padding: 0 !important;
       }
 
       /* ULTERIORIO INFORMAZIONI */
@@ -547,7 +558,7 @@
           RIEPILOGO INDAGINE
         </p>
         <!-- TABELLA -->
-        <table style="width: 100%; margin-top: 20px">
+        <table style="width: 100%; margin-top: 40px">
           <thead>
             <th class="padding_td_th" colspan="2">
               <p class="bold no-margin" style="text-align: center">
@@ -737,7 +748,7 @@
                   ANAGRAFICA
                 </p>
               </td>
-              <td style="width: 50%">
+              <td class="padding_td_th" style="width: 50%">
                 <p
                   class="regular no-margin"
                   style="text-align: center; color: #008000"
@@ -794,10 +805,10 @@
             <tr>
               <td class="padding_td_th" style="width: 50%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: center">
-                  CARICHE IN IMPRESE PROGRESSE
+                  CARICHE IN IMPRESE PREGRESSE
                 </p>
               </td>
-              <td style="width: 50%">
+              <td class="padding_td_th" style="width: 50%">
                 <p
                   class="regular no-margin"
                   style="text-align: center; color: #ff0000"
@@ -842,7 +853,7 @@
                   NEGATIVITA
                 </p>
               </td>
-              <td style="width: 50%">
+              <td class="padding_td_th" style="width: 50%">
                 <p
                   class="regular no-margin"
                   style="text-align: center; color: #ff0000"
@@ -855,7 +866,7 @@
               <td class="padding_td_th" style="width: 50%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: center">VEICOLI</p>
               </td>
-              <td style="width: 50%">
+              <td class="padding_td_th" style="width: 50%">
                 <p
                   class="regular no-margin"
                   style="text-align: center; color: #ff0000"
@@ -900,7 +911,7 @@
                   GIUDIZIO RECUPERABILITA
                 </p>
               </td>
-              <td style="width: 50%">
+              <td class="padding_td_th" style="width: 50%">
                 <p
                   class="regular no-margin"
                   style="text-align: center; color: #008000"
@@ -920,96 +931,103 @@
             ANAGRAFICA
           </p>
         </div>
-        <table style="width: 100%; border: none !important; margin-left: 10px">
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-top: 20px;
+          "
+        >
           <tbody>
             <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">Ragione Sociale</p>
+              <td style="border: none !important; width: 30%">
+                <p class="regular__min no-margin">Ragione Sociale</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">THERMAS DI ROSSI SERGHEJ</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">CODICE FISCALE</p>
-              </td>
-              <td style="border: none !important">
-                <p class="regular no-margin">RSSSGH01P27Z154L</p>
+                <p class="regular__min no-margin">THERMAS DI ROSSI SERGHEJ</p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Partita IVA</p>
+                <p class="regular__min no-margin">Cod. fiscale</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">02668740067</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">Cod.CCIAA/N.REA</p>
-              </td>
-              <td style="border: none !important">
-                <p class="regular no-margin">AL303346</p>
+                <p class="regular__min no-margin">RSSSGH01P27Z154L</p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Sede</p>
+                <p class="regular__min no-margin">Partita IVA</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">
+                <p class="regular__min no-margin">02668740067</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Cod.CCIAA/N.REA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">AL303346</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Sede</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
                   CORSO VALENTINO 255 - 15033 CASALE MONFERRATO (AL)
                 </p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Forma giuridica</p>
+                <p class="regular__min no-margin">Forma giuridica</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">Impresa Individuale</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">Stato società</p>
-              </td>
-              <td style="border: none !important">
-                <p class="regular no-margin">REGISTRATA</p>
+                <p class="regular__min no-margin">Impresa Individuale</p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Valore nominale</p>
+                <p class="regular__min no-margin">Stato società</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">155.246,94 €</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">conferimenti</p>
-              </td>
-              <td style="border: none !important">
-                <p class="regular no-margin"></p>
+                <p class="regular__min no-margin">REGISTRATA</p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Data inizio attività</p>
+                <p class="regular__min no-margin">Valore nominale</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">06/08/2021</p>
+                <p class="regular__min no-margin">155.246,94 €</p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Attività</p>
+                <p class="regular__min no-margin">conferimenti</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">
+                <p class="regular__min no-margin"></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data inizio attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">06/08/2021</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
                   46.74.2 - Commercio All'Ingrosso Di Apparecchi E Accessori Per
                   Impianti Idraulici, Di Riscaldamento E Di Condizionamento
                 </p>
@@ -1017,30 +1035,30 @@
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Codice RAE</p>
+                <p class="regular__min no-margin">Codice RAE</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">
+                <p class="regular__min no-margin">
                   619 - C.I. PRODOTTI NON ALIMENTARI
                 </p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Codice SAE</p>
+                <p class="regular__min no-margin">Codice SAE</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">
+                <p class="regular__min no-margin">
                   615 - ALTRE FAMIGLIE PRODUTTRICI
                 </p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Codice NACE</p>
+                <p class="regular__min no-margin">Codice NACE</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">
+                <p class="regular__min no-margin">
                   47.59 - Commercio Al Deaglio Di Mobili, Di Arcoli Per
                   L'Illuminazione E Altri Arcoli Per La Casa In Esercizi
                   Specializza
@@ -1049,26 +1067,28 @@
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Email certiﬁcata</p>
+                <p class="regular__min no-margin">Email certiﬁcata</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">THERMASDIROSSI@LEGALMAIL.IT</p>
-              </td>
-            </tr>
-            <tr>
-              <td style="border: none !important">
-                <p class="regular no-margin">Data costituzione</p>
-              </td>
-              <td style="border: none !important">
-                <p class="regular no-margin">28/07/2021</p>
+                <p class="regular__min no-margin">
+                  THERMASDIROSSI@LEGALMAIL.IT
+                </p>
               </td>
             </tr>
             <tr>
               <td style="border: none !important">
-                <p class="regular no-margin">Data termine</p>
+                <p class="regular__min no-margin">Data costituzione</p>
               </td>
               <td style="border: none !important">
-                <p class="regular no-margin">31/12/2040</p>
+                <p class="regular__min no-margin">28/07/2021</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data termine</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">31/12/2040</p>
               </td>
             </tr>
           </tbody>
@@ -1413,7 +1433,7 @@
             </td>
           </tr>
         </table>
-        <p class="regular" style="line-height: 22px">
+        <p class="regular" style="line-height: 24px">
           NOTE: Il controllo è stato effettuato sugli eventi negativi associati
           alla persona o all'impresa richiesta negli ultimi 5 anni: in alcuni
           casi potrebbero non essere rilevati i protesti pubblicati in CCIAA
@@ -1424,7 +1444,7 @@
         </p>
       </div>
       <!-- INDAGINI NEGOZIALI -->
-      <div class="" id="INDAGINI_NEGOZIALI">
+      <div class="containerPadding" id="INDAGINI_NEGOZIALI">
         <p
           class="bold"
           style="border-bottom: 2px solid #6e6e6e; margin-bottom: 40px"
@@ -1439,7 +1459,7 @@
         </p>
       </div>
       <!-- VEICOLI -->
-      <div class="breakPage" id="VEICOLI">
+      <div class="containerPadding breakPage" id="VEICOLI">
         <p
           class="bold"
           style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
@@ -1455,7 +1475,12 @@
       </div>
       <!-- TABELLE VEICOLI -->
       <table
-        style="width: 100%; border: none !important; border-spacing: 10px 0"
+        style="
+          width: 100%;
+          border: none !important;
+          border-spacing: 10px 5px;
+          border-collapse: separate;
+        "
       >
         <thead>
           <tr></tr>
@@ -1472,13 +1497,13 @@
               <p class="regular no-margin">Provincia</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">AQ</p>
+              <p class="regular no-margin" style="text-align: left">AQ</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Prima</p>
+              <p class="regular no-margin" style="text-align: left">Prima</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 25/02/1988
               </p>
             </td>
@@ -1488,15 +1513,15 @@
               <p class="regular no-margin">competenza</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 immatricolazione
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
           </tr>
           <tr>
@@ -1504,15 +1529,15 @@
               <p class="regular no-margin">Serie targa</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVEICOLO
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Telaio</p>
+              <p class="regular no-margin" style="text-align: left">Telaio</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 ZAM332B00HB206333
               </p>
             </td>
@@ -1522,13 +1547,13 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Classe</p>
+              <p class="regular no-margin" style="text-align: left">Classe</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVETTURA
               </p>
             </td>
@@ -1538,15 +1563,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Ruolo soggetto
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Intestatario
               </p>
             </td>
@@ -1557,15 +1582,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Data ruolo
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 03/09/1990
               </p>
             </td>
@@ -1573,7 +1598,12 @@
         </tbody>
       </table>
       <table
-        style="width: 100%; border: none !important; border-spacing: 10px 0"
+        style="
+          width: 100%;
+          border: none !important;
+          border-spacing: 10px 5px;
+          border-collapse: separate;
+        "
       >
         <thead>
           <tr></tr>
@@ -1590,13 +1620,13 @@
               <p class="regular no-margin">Provincia</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">AQ</p>
+              <p class="regular no-margin" style="text-align: left">AQ</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Prima</p>
+              <p class="regular no-margin" style="text-align: left">Prima</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 25/02/1988
               </p>
             </td>
@@ -1606,15 +1636,15 @@
               <p class="regular no-margin">competenza</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 immatricolazione
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
           </tr>
           <tr>
@@ -1622,15 +1652,15 @@
               <p class="regular no-margin">Serie targa</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVEICOLO
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Telaio</p>
+              <p class="regular no-margin" style="text-align: left">Telaio</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 ZAM332B00HB206333
               </p>
             </td>
@@ -1640,13 +1670,13 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Classe</p>
+              <p class="regular no-margin" style="text-align: left">Classe</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVETTURA
               </p>
             </td>
@@ -1656,15 +1686,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Ruolo soggetto
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Intestatario
               </p>
             </td>
@@ -1675,15 +1705,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Data ruolo
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 03/09/1990
               </p>
             </td>
@@ -1691,7 +1721,12 @@
         </tbody>
       </table>
       <table
-        style="width: 100%; border: none !important; border-spacing: 10px 0"
+        style="
+          width: 100%;
+          border: none !important;
+          border-spacing: 10px 5px;
+          border-collapse: separate;
+        "
       >
         <thead>
           <tr></tr>
@@ -1708,13 +1743,13 @@
               <p class="regular no-margin">Provincia</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">AQ</p>
+              <p class="regular no-margin" style="text-align: left">AQ</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Prima</p>
+              <p class="regular no-margin" style="text-align: left">Prima</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 25/02/1988
               </p>
             </td>
@@ -1724,15 +1759,15 @@
               <p class="regular no-margin">competenza</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 immatricolazione
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
           </tr>
           <tr>
@@ -1740,15 +1775,15 @@
               <p class="regular no-margin">Serie targa</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVEICOLO
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Telaio</p>
+              <p class="regular no-margin" style="text-align: left">Telaio</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 ZAM332B00HB206333
               </p>
             </td>
@@ -1758,13 +1793,13 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Classe</p>
+              <p class="regular no-margin" style="text-align: left">Classe</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVETTURA
               </p>
             </td>
@@ -1774,15 +1809,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Ruolo soggetto
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Intestatario
               </p>
             </td>
@@ -1793,15 +1828,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Data ruolo
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 03/09/1990
               </p>
             </td>
@@ -1809,7 +1844,12 @@
         </tbody>
       </table>
       <table
-        style="width: 100%; border: none !important; border-spacing: 10px 0"
+        style="
+          width: 100%;
+          border: none !important;
+          border-spacing: 10px 5px;
+          border-collapse: separate;
+        "
       >
         <thead>
           <tr></tr>
@@ -1826,13 +1866,13 @@
               <p class="regular no-margin">Provincia</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">AQ</p>
+              <p class="regular no-margin" style="text-align: left">AQ</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Prima</p>
+              <p class="regular no-margin" style="text-align: left">Prima</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 25/02/1988
               </p>
             </td>
@@ -1842,15 +1882,15 @@
               <p class="regular no-margin">competenza</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 immatricolazione
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
           </tr>
           <tr>
@@ -1858,15 +1898,15 @@
               <p class="regular no-margin">Serie targa</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVEICOLO
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Telaio</p>
+              <p class="regular no-margin" style="text-align: left">Telaio</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 ZAM332B00HB206333
               </p>
             </td>
@@ -1876,13 +1916,13 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Classe</p>
+              <p class="regular no-margin" style="text-align: left">Classe</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVETTURA
               </p>
             </td>
@@ -1892,15 +1932,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Ruolo soggetto
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Intestatario
               </p>
             </td>
@@ -1911,15 +1951,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Data ruolo
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 03/09/1990
               </p>
             </td>
@@ -1927,7 +1967,12 @@
         </tbody>
       </table>
       <table
-        style="width: 100%; border: none !important; border-spacing: 10px 0"
+        style="
+          width: 100%;
+          border: none !important;
+          border-spacing: 10px 5px;
+          border-collapse: separate;
+        "
       >
         <thead>
           <tr></tr>
@@ -1944,13 +1989,13 @@
               <p class="regular no-margin">Provincia</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">AQ</p>
+              <p class="regular no-margin" style="text-align: left">AQ</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Prima</p>
+              <p class="regular no-margin" style="text-align: left">Prima</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 25/02/1988
               </p>
             </td>
@@ -1960,15 +2005,15 @@
               <p class="regular no-margin">competenza</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 immatricolazione
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
           </tr>
           <tr>
@@ -1976,15 +2021,15 @@
               <p class="regular no-margin">Serie targa</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVEICOLO
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Telaio</p>
+              <p class="regular no-margin" style="text-align: left">Telaio</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 ZAM332B00HB206333
               </p>
             </td>
@@ -1994,13 +2039,13 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">Classe</p>
+              <p class="regular no-margin" style="text-align: left">Classe</p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 AUTOVETTURA
               </p>
             </td>
@@ -2010,15 +2055,15 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Ruolo soggetto
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Intestatario
               </p>
             </td>
@@ -2029,26 +2074,26 @@
               <p class="regular no-margin"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center"></p>
+              <p class="regular no-margin" style="text-align: left"></p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 Data ruolo
               </p>
             </td>
             <td style="border: none !important">
-              <p class="regular no-margin" style="text-align: center">
+              <p class="regular no-margin" style="text-align: left">
                 03/09/1990
               </p>
             </td>
           </tr>
         </tbody>
       </table>
-      <!-- VEICOLI -->
-      <div class="" id="IMMOBILI">
+      <!-- IMMOBILI -->
+      <div style="margin-top: 80px" id="IMMOBILI">
         <p
           class="bold"
-          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 30px"
         >
           IMMOBILI
         </p>
@@ -2059,14 +2104,14 @@
         </p>
       </div>
       <!-- RAPPORTI BANCARI -->
-      <div id="RAPPORTI_BANCARI">
+      <div style="margin-top: 60px" id="RAPPORTI_BANCARI">
         <p
           class="bold"
-          style="border-bottom: 2px solid #6e6e6e; margin: 30px 0"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 50px"
         >
           RAPPORTI BANCARI
         </p>
-        <p class="regular" style="line-height: 22px">
+        <p class="regular" style="line-height: 24px">
           Le indagini condotte presso le principali fonti economico-patrimoniali
           hanno come obiettivo la rilevazione di posizioni bancarie nelle
           disponibilità del soggetto investigato. A partire dalla zona di
@@ -2075,13 +2120,28 @@
           ulteriore conto intestato alla ditta individuale presso l'Istituto
           indicato:
         </p>
-        <p class="bold" style="background-color: #eeeeee; margin: 20px 0">
+        <p class="bold" style="background-color: #eeeeee; margin-bottom: 30px">
           RAPPORTI ATTIVI
         </p>
-        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+        <p
+          class="bold"
+          style="
+            border-bottom: 2px solid #6e6e6e;
+            padding: 0;
+            margin-left: 20px;
+          "
+        >
           BPER BANCA S.P.A. - AGENZIA L'AQUILA SEDE
         </p>
-        <table style="width: 100%; border: none !important; margin-left: 20px">
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 20px;
+            border-spacing: 2.5px;
+            border-collapse: separate;
+          "
+        >
           <tbody>
             <tr>
               <td style="border: none !important">
@@ -2245,104 +2305,104 @@
         <table style="width: 100%; margin-top: 30px">
           <tbody>
             <tr style="border: none">
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">COGNOME</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   MARTINI
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">NOME</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   DONATELLA
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">
                   CODICE FISCALE
                 </p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   MRTDTL61B41A345R
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">
                   DATA DI NASCITA
                 </p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   01/02/1961
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">
                   LUOGO DI NASCITA
                 </p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   L'AQUILA
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">
                   PROVINCIA DI NASCITA
                 </p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">AQ</p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">INDIRIZZO</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   VIA STATALE 17 2 A
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">CAP</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">67026</p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">COMUNE</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">
                   POGGIO PICENZE
                 </p>
               </td>
             </tr>
             <tr>
-              <td style="width: 35%; background: #eeeeee">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
                 <p class="bold no-margin" style="text-align: left">PROVINCIA</p>
               </td>
-              <td style="width: 65%">
+              <td class="padding_td_th" style="width: 65%">
                 <p class="regular no-margin" style="text-align: left">AQ</p>
               </td>
             </tr>
@@ -2353,12 +2413,12 @@
       <div
         class="containerPadding"
         id="REPERIBILITÁ"
-        style="padding-bottom: 0; margin-top: 30px"
+        style="padding-bottom: 0; margin-top: 50px"
       >
         <p class="bold" style="border-bottom: 2px solid #6e6e6e">
           REPERIBILITÁ
         </p>
-        <p class="regular no-padding">
+        <p class="regular" style="line-height: 22px; padding-top: 10px">
           Le indagini effettuate, promosse sulla base dei dati anagrafici
           forniti, hanno come obiettivo principale l'acquisizione degli
           indirizzi noti del soggetto investigato al fine di individuare quello
@@ -2372,12 +2432,12 @@
       <div
         class="containerPadding breakPage"
         id="RECAPITI_TELEFONICI"
-        style="padding-bottom: 0; margin-top: 30px"
+        style="padding-bottom: 0; margin-top: 50px"
       >
         <p class="bold" style="border-bottom: 2px solid #6e6e6e">
           RECAPITI TELEFONICI
         </p>
-        <p class="regular no-padding">
+        <p class="regular" style="padding-top: 20px">
           A seguito di consultazione dei pubblici elenchi non abbiamo reperito
           utenze telefoniche riferibili al soggetto in esame.
         </p>
@@ -2472,6 +2532,20 @@
             </tr>
           </table>
         </div>
+        <table
+          style="width: 100%; border: none; border-top: 2px dotted #555555"
+        >
+          <tr style="border: none !important">
+            <td
+              style="border: none !important; width: 20%; padding-right: 20px"
+            >
+              <p class="regular">Cariche cessate</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular">SOCIO ACCOMANDANTE</p>
+            </td>
+          </tr>
+        </table>
         <p class="bold" style="border-bottom: 1px solid #6e6e6e">
           CARICHE IN IMPRESE PREGRESSE
         </p>
@@ -2486,7 +2560,7 @@
         <p class="bold" style="border-bottom: 2px solid #6e6e6e">
           ATTIVITÁ LAVORATIVA
         </p>
-        <p class="regular">
+        <p class="regular" style="line-height: 22px">
           Da consultazione del Registro Imprese tenuto dalle Camere di Commercio
           Italiane è emerso che il soggetto risulta essere Titolare di Cariche
           Attive. Attraverso l'intervento dei nostri corrispondenti locali sono
@@ -2520,20 +2594,29 @@
             padding-left: 50%;
           "
         >
-          <p class="regular" style="padding: 0">Importo annuo <br />netto</p>
-          <p class="regular" style="padding: 0">3.000,00€</p>
+          <p class="regular no-margin" style="padding: 0">
+            Importo annuo <br />netto
+          </p>
+          <p class="regular no-margin" style="padding: 0">3.000,00 €</p>
         </div>
         <div style="padding: 0 10px">
           <p class="bold" style="border-bottom: 1px solid #6e6e6e">
             DATI AZIENDA
           </p>
-          <table style="width: 100%; border: none">
+          <table
+            style="
+              width: 100%;
+              border: none;
+              border-spacing: 5px;
+              border-collapse: separate;
+            "
+          >
             <tr style="border: none !important">
               <td style="border: none !important; width: 30%">
-                <p class="regular">Denominazione</p>
+                <p class="regular no-margin">Denominazione</p>
               </td>
               <td style="border: none !important">
-                <p class="regular">
+                <p class="regular no-margin">
                   SOCIETA' AQUILANA DI MARTINI D. ED A. & C. - SOCIETA' IN
                   ACCOMANDITA SEMPLICE
                 </p>
@@ -2541,18 +2624,20 @@
             </tr>
             <tr style="border: none !important">
               <td style="border: none !important">
-                <p class="regular">Recapito</p>
+                <p class="regular no-margin">Recapito</p>
               </td>
               <td style="border: none !important">
-                <p class="regular">0862410188</p>
+                <p class="regular no-margin">0862410188</p>
               </td>
             </tr>
             <tr style="border: none !important">
               <td style="border: none !important">
-                <p class="bold">Note di veriﬁca</p>
+                <p class="bold no-margin">Note di veriﬁca</p>
               </td>
               <td style="border: none !important">
-                <p class="regular">Operatività aziendale confermata</p>
+                <p class="regular no-margin">
+                  Operatività aziendale confermata
+                </p>
               </td>
             </tr>
           </table>
@@ -2570,7 +2655,7 @@
         <p class="bold" style="border-bottom: 2px solid #6e6e6e">
           PARTECIPAZIONI IN IMPRESE
         </p>
-        <p class="regular">
+        <p class="regular" style="line-height: 22px; margin-top: 30px">
           Da consultazione delle banche dati pubbliche tenute e messe a
           disposizione dalle Camere di Commercio Italiane sono state rilevate le
           seguenti partecipazioni in imprese a carico del soggetto in esame:
@@ -2606,7 +2691,7 @@
           </tr>
         </table>
 
-        <p class="regular">
+        <p class="regular" style="line-height: 22px">
           NOTE: Il controllo è stato effettuato sugli eventi negativi associati
           alla persona o all'impresa richiesta negli ultimi 5 anni: in alcuni
           casi potrebbero non essere rilevati i protesti pubblicati in CCIAA
@@ -2624,7 +2709,7 @@
         >
           VEICOLI
         </p>
-        <p class="regular">
+        <p class="regular" style="margin-top: 30px">
           Gli accertamenti eﬀettuati in loco attraverso l’intervento dei nostri
           corrispondenti locali e l’incrocio dei dati raccolti con la veriﬁca
           presso il Pubblico Registro Automobilistico, hanno evidenziato che il
@@ -2639,39 +2724,42 @@
         >
           IMMOBILI
         </p>
-        <p class="regular">
+        <p class="regular" style="margin-top: 30px">
           Dalla consultazione degli appositi archivi degli Uﬃci Catastali
           Divisione Territorio, sono state rilevate le seguenti proprietà
           immobiliari intestate al soggetto in esame (salvo visura
           ipocatastale):
         </p>
-        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+        >
           DATI CATASTO UFFICIO DI AQ - L'AQUILA
         </p>
         <div style="display: flex">
           <table style="width: 50%; border: none !important">
             <tr style="border: none !important">
               <td style="border: none !important">
-                <p class="regular">Soggetto</p>
+                <p class="regular no-margin">Soggetto</p>
               </td>
               <td style="border: none !important">
-                <p class="regular">MARTIINI DONATELLA</p>
+                <p class="regular no-margin">MARTIINI DONATELLA</p>
               </td>
             </tr>
           </table>
           <table style="width: 50%; border: none">
             <tr style="border: none !important">
               <td style="border: none !important">
-                <p class="regular">Cod. Fiscale</p>
+                <p class="regular no-margin">Cod. Fiscale</p>
               </td>
               <td style="border: none !important">
-                <p class="regular">RSSSGH01P27Z154L</p>
+                <p class="regular no-margin">RSSSGH01P27Z154L</p>
               </td>
             </tr>
           </table>
         </div>
       </div>
-      <div style="margin-top: 20px" class="breakPage">
+      <div style="margin-top: 50px" class="breakPage">
         <p class="bold">COMUNE: A345 L'AQUILA</p>
         <table style="width: 100%">
           <thead>
@@ -2833,20 +2921,25 @@
         <div
           style="
             display: flex;
-            margin-top: 20px;
+            margin-top: 30px;
+            margin-bottom: 30px;
             justify-content: space-between;
           "
         >
           <div style="width: 20%">
-            <p
-              class="bold"
-              style="border-bottom: 1px solid #6e6e6e; margin-top: 30px"
-            >
+            <p class="bold" style="border-bottom: 1px solid #6e6e6e">
               Valutazione
             </p>
           </div>
           <div style="width: 70%">
-            <table style="width: 100%; border: none !important">
+            <table
+              style="
+                width: 100%;
+                border: none !important;
+                border-spacing: 5px;
+                border-collapse: separate;
+              "
+            >
               <tbody>
                 <tr>
                   <td style="border: none !important">
@@ -3080,7 +3173,7 @@
         </table>
       </div>
 
-      <div style="margin-top: 80px">
+      <div style="margin-top: 60px">
         <p class="bold">COMUNE: G766 POGGIO PICENZE</p>
         <table style="width: 100%">
           <thead>
@@ -4427,62 +4520,92 @@
         <table style="width: 100%; margin-top: 20px">
           <thead>
             <th style="border-right: 1px solid black">
-              <p class="bold no-margin" style="font-size: 7.5pt !important">
+              <p
+                class="bold no-margin"
+                style="font-size: 7.5pt !important; text-align: left"
+              >
                 id
               </p>
             </th>
             <th style="border-right: 1px solid black">
-              <p class="bold no-margin" style="font-size: 7.5pt !important">
+              <p
+                class="bold no-margin"
+                style="font-size: 7.5pt !important; text-align: left"
+              >
                 intestatario
               </p>
             </th>
             <th style="border-right: 1px solid black">
-              <p class="bold no-margin" style="font-size: 7.5pt !important">
+              <p
+                class="bold no-margin"
+                style="font-size: 7.5pt !important; text-align: left"
+              >
                 Codice fiscale
               </p>
             </th>
             <th style="border-right: 1px solid black">
-              <p class="bold no-margin" style="font-size: 7.5pt !important">
+              <p
+                class="bold no-margin"
+                style="font-size: 7.5pt !important; text-align: left"
+              >
                 Tipo diritto
               </p>
             </th>
             <th>
-              <p class="bold no-margin" style="font-size: 7.5pt !important">
+              <p
+                class="bold no-margin"
+                style="font-size: 7.5pt !important; text-align: left"
+              >
                 Quota diritto
               </p>
             </th>
           </thead>
           <tbody>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4495,36 +4618,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4537,36 +4675,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4579,36 +4732,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4621,36 +4789,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4663,36 +4846,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4705,36 +4903,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  Proprieta'
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1/2
+                </p>
+              </td>
+            </tr>
+            <tr class="table_noborder">
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  1
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
+                </p>
+              </td>
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
+                  RSSSGH01P27Z154L
+                </p>
+              </td>
+              <td style="border-right: 1px solid black">
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
@@ -4747,372 +4960,51 @@
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+              <td>
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1/2
                 </p>
               </td>
             </tr>
-            <tr style="border: none !important">
+            <tr class="table_noborder">
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   1
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
                 </p>
               </td>
               <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   RSSSGH01P27Z154L
                 </p>
               </td>
               <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  Proprieta'
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1/2
-                </p>
-              </td>
-            </tr>
-            <tr style="border: none !important">
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  1
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  ROSSI SERGHEJ nato il 27/09/2001 a RUSSIA O FEDERAZIONE RUSSA
-                </p>
-              </td>
-              <td>
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
-                  RSSSGH01P27Z154L
-                </p>
-              </td>
-              <td style="border-right: 1px solid black">
-                <p
-                  class="regular no-margin"
-                  style="font-size: 7.5pt !important"
-                >
+                <p class="regular no-margin" style="font-size: 7pt !important">
                   Proprieta'
                 </p>
               </td>
