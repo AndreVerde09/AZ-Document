@@ -1,0 +1,2424 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .container_footer {
+        width: 100%;
+        padding: 10px;
+        page-break-after: always;
+      }
+
+      .container_footer img {
+        object-fit: contain;
+      }
+
+      .breakPage {
+        page-break-after: always;
+      }
+
+      .bold {
+        color: #1f497d;
+        font-size: 11pt;
+        font-weight: 600;
+        padding: 0 10px;
+      }
+      .regular {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: 300;
+        padding: 0 10px;
+        text-align: justify;
+      }
+      .no-margin {
+        margin: 0;
+      }
+      .no-padding {
+        padding: 0;
+      }
+      .regular__min {
+        color: #1f497d;
+        font-size: 10pt;
+        font-weight: normal;
+        margin-top: 5px;
+        padding: 0 10px;
+      }
+
+      .container {
+        padding: 10px;
+      }
+
+      .containerPadding {
+        margin-left: 10px;
+        margin-top: 50px;
+      }
+
+      .container__title {
+        text-align: end;
+        width: 100%;
+        border-bottom: 2px solid #6e6e6e;
+      }
+
+      .container__title__title {
+        color: #023671;
+        font-size: 24pt !important;
+        font-weight: 500;
+      }
+
+      h1.container__title__title {
+        margin-bottom: 4px !important;
+      }
+      h3.container__title__subtitle {
+        margin-top: 8px !important;
+      }
+
+      .container__title__subtitle {
+        color: #023671;
+        font-size: 16pt !important;
+        font-weight: normal;
+      }
+
+      .cellSx {
+        text-align: center;
+        background-color: #eeeeee !important;
+        width: 50%;
+      }
+
+      .cellDx {
+        text-align: center;
+        width: 50%;
+      }
+
+      table {
+        border: 1px solid #333;
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+      }
+      thead {
+        display: table-row-group;
+      }
+
+      td,
+      th {
+        border: 1px solid #6e6e6e;
+        padding: 0 !important;
+      }
+
+      td {
+        padding: 0 !important;
+        vertical-align: top;
+      }
+
+      .padding_td_th {
+        padding: 3px !important;
+      }
+
+      /* NB */
+
+      .container__nb {
+        margin-top: 200px;
+        width: 100%;
+      }
+      /* INDICE */
+
+      .container__contenuti {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .container__inner_contenuti {
+        padding: 0 1.5rem;
+      }
+
+      .contentuti__row {
+        display: flex;
+        width: 100%;
+      }
+
+      .contentuti__row > div:first-child {
+        width: 90%;
+        border-bottom: 2px dotted #555555;
+      }
+
+      .contentuti__row > div:first-child > p {
+        font-size: 10pt;
+        margin: 0.5rem 0;
+        padding: 0;
+      }
+
+      .contenuti__row__dx {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        line-height: 18px;
+      }
+
+      .padding_td_th > p {
+        font-size: 10pt !important;
+      }
+
+      a > div > div > p {
+        margin: 7px !important;
+      }
+
+      .table_noborder > td {
+        border: 1px solid #6e6e6e;
+        border-bottom: none !important;
+        border-top: none !important;
+        padding: 0 !important;
+      }
+
+      /* ULTERIORIO INFORMAZIONI */
+      .ulteriori_informazioni_container {
+        margin-top: 50px;
+        padding: 40pt;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="container__title">
+        <h1 class="container__title__title">Cribis Search Light Urgente</h1>
+        <h3 class="container__title__subtitle">
+          Persona giuridica no corporate
+        </h3>
+      </div>
+      <!-- TABELLA -->
+      <table style="width: 100%; margin-top: 30px">
+        <thead>
+          <th class="padding_td_th" colspan="2">
+            <p class="bold no-margin" style="text-align: center">
+              IL BUSCAIOL SAS DI FULIGNANI SIMONE
+            </p>
+          </th>
+        </thead>
+        <tbody>
+          <tr style="border: none">
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                INFORMAZIONE N°
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                5788489
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                RIF. CLIENTE
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                4000003416/TLMB2B/CRIBISCM40705
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                DATA RICHIESTA
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                13/07/2021
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                DATA EVASIONE
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                02/08/2021
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- TABELLA -->
+      <table style="width: 100%; margin-top: 28px">
+        <thead>
+          <th class="padding_td_th" colspan="2">
+            <p class="bold no-margin" style="text-align: center">DATI INPUT</p>
+          </th>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                DENOMINAZIONE
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE & C
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                CODICE FISCALE
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                00070420666
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">TIPO_ELAB</p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                cribis_search_l
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">
+                NOME PRODOTTO
+              </p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">
+                Cribis SEARCH Light
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+              <p class="bold no-margin" style="text-align: center">URGENTE</p>
+            </td>
+            <td class="padding_td_th" style="width: 50%">
+              <p class="regular no-margin" style="text-align: center">SI</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <!-- N.B. -->
+      <div class="container__nb breakPage">
+        <span class="bold">N.B.</span>
+        <p class="regular__min" style="text-align: justify">
+          Le informazioni ed i dati forniti dalla nostra azienda alla propria
+          clientela, sono raccolti e trattati secondo quanto disposto dal D.
+          Lgs. 196 del 2003 e dal nuovo RE 679/2016. I clienti possono quindi
+          utilizzare i dati e le informazioni fornite secondo le modalità
+          previste dalla legge per la tutela dei propri diritti. L’informazione
+          ha natura strettamente riservata, personale e confidenziale, pertanto
+          non può essere divulgata a terzi e tantomeno in sede giudiziaria in
+          quanto le informazioni presenti non sono supportate da prove
+          documentali. Ci esimiamo da qualsiasi responsabilità consequenziale,
+          di natura civile, penale derivanti da dette violazioni. E’ sin da ora
+          escluso qualunque titolo e motivo di azione di rivalsa per le notizie
+          fornite.
+        </p>
+      </div>
+      <!-- INDICE -->
+      <div class="container__contenuti">
+        <p class="bold">Contenuti</p>
+        <div class="container__inner_contenuti">
+          <a href="#RIEPILOGO_INDAGINE" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RIEPILOGO INDAGINE</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular" id="indice_riepilogo_indagine"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#ANAGRAFICA_IMRESA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">ANAGRAFICA IMPRESA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#OPERATIVITÁ" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">OPERATIVITÁ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#RECAPITI_TELEFONICI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RECAPITI TELEFONICI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">6</span>
+              </div>
+            </div>
+          </a>
+          <a href="#PARTECIPAZIONI_IMPRESA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">PARTECIPAZIONI IMPRESA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">6</span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#PARTECIPAZIONI_SOCI_AGGREDBILI"
+            style="text-decoration: none"
+          >
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">PARTECIPAZIONI SOCI AGGREDIBILI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">7</span>
+              </div>
+            </div>
+          </a>
+          <a href="#NEGATIVITA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">NEGATIVITÁ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">7</span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#VEICOLI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">VEICOLI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">7</span>
+              </div>
+            </div>
+          </a>
+          <a href="#IMMOBILI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">IMMOBILI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">9</span>
+              </div>
+            </div>
+          </a>
+          <a href="#RAPPORTI_BANCARI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RAPPORTI BANCARI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">9</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="container__contenuti breakPage">
+        <p class="bold">Legale rappresentante</p>
+        <div class="container__inner_contenuti">
+          <a href="#ANAGRAFICA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">ANAGRAFICA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">11</span>
+              </div>
+            </div>
+          </a>
+          <a href="#REPERIBILITÁ" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">REPERIBILITÁ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">11</span>
+              </div>
+            </div>
+          </a>
+          <a href="#RECAPITI_TELEFONICI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RECAPITI TELEFONICI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">11</span>
+              </div>
+            </div>
+          </a>
+          <a href="#CARICHE_IN_IMPRESE" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">CARICHE IN IMPRESE</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">12</span>
+              </div>
+            </div>
+          </a>
+          <a href="#ATTIVITÁ_LAVORATIVA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">ATTIVITÁ LAVORATIVA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">12</span>
+              </div>
+            </div>
+          </a>
+          <a href="#PARTECIPAZIONI_IN_IMPRESE" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">PARTECIPAZIONI IN IMPRESE</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">13</span>
+              </div>
+            </div>
+          </a>
+          <a href="#NEGATIVITA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">NEGATIVITÁ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">13</span>
+              </div>
+            </div>
+          </a>
+          <a href="#VEICOLI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">VEICOLI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">14</span>
+              </div>
+            </div>
+          </a>
+          <a href="#IMMOBILI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">IMMOBILI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">14</span>
+              </div>
+            </div>
+          </a>
+          <a href="#RAPPORTI_BANCARI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RAPPORTI BANCARI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular">22</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- RIEPILOGO INDAGINE -->
+      <div class="breakPage" id="RIEPILOGO_INDAGINE">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          RIEPILOGO INDAGINE
+        </p>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 40px">
+          <thead>
+            <th class="padding_td_th" colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                SOCIETA' AQUILANA DI MARTINI D. ED A. & C. SAS
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  ANAGRAFICA IMPRESA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  OPERATIVITÁ
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  CONFERMATA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RECAPITI TELEFONICI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  PARTECIPAZIONI IMPRESA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  PARTECIPAZIONI SOCI AGGREDIBILI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  NEGATIVITÁ
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">VEICOLI</p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  IMMOBILI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RAPPORTI BANCARI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 80px">
+          <thead>
+            <th class="padding_td_th" colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                MARTINI DONATELLA
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  ANAGRAFICA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  REPERIBILITÀ
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  CONFERMATA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RECAPITI TELEFONICI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  CARICHE IN IMPRESE ATTUALI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  CARICHE IN IMPRESE PREGRESSE
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  ATTIVITÁ LAVORATIVA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  PARTECIPAZIONI IN IMPRESE
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  NEGATIVITA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">VEICOLI</p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  IMMOBILI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RAPPORTI BANCARI
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- ANAGRAFICA  -->
+      <div id="ANAGRAFICA_IMRESA">
+        <div>
+          <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+            ANAGRAFICA
+          </p>
+        </div>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-top: 20px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none !important; width: 30%">
+                <p class="regular__min no-margin">Ragione Sociale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">THERMAS DI ROSSI SERGHEJ</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Cod. fiscale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">RSSSGH01P27Z154L</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Partita IVA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">02668740067</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Cod.CCIAA/N.REA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">AL303346</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Sede</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  CORSO VALENTINO 255 - 15033 CASALE MONFERRATO (AL)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Forma giuridica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Impresa Individuale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Stato società</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">REGISTRATA</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Valore nominale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">155.246,94 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">conferimenti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin"></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Email certiﬁcata</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  THERMASDIROSSI@LEGALMAIL.IT
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data costituzione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">28/07/2021</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data termine</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">31/12/2040</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- EVENTI LEGALI -->
+        <p
+          class="bold"
+          style="background-color: #eeeeee; margin: 20px 0; padding: 10px"
+        >
+          EVENTI LEGALI
+        </p>
+        <div style="padding-left: 10px">
+          <p
+            class="bold"
+            style="
+              border-bottom: 2px solid #6e6e6e;
+              margin-bottom: 0;
+              padding: 5px 0;
+            "
+          >
+            Procedure legali
+          </p>
+          <div style="display: flex; align-items: center">
+            <p
+              class="bold"
+              style="background-color: #f0f3f7; border: none; padding: 5px 20px"
+            >
+              Scioglimento e liquidazione
+            </p>
+            <table style="width: 50%; border: none !important">
+              <tbody>
+                <tr>
+                  <td style="border: none !important">
+                    <p class="regular__min no-margin">Data iscrizione</p>
+                  </td>
+                  <td style="border: none !important">
+                    <p class="regular__min no-margin">10/03/2022</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td style="border: none !important">
+                    <p class="regular__min no-margin">Tipo atto</p>
+                  </td>
+                  <td style="border: none !important">
+                    <p class="regular__min no-margin">
+                      Scioglimento E Liquidazione
+                    </p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- DIPENDENTI PER ANNO -->
+      <div class="containerPadding">
+        <p
+          class="bold"
+          style="
+            border-bottom: 2px solid #6e6e6e;
+            margin-bottom: 0;
+            padding: 5px 0;
+          "
+        >
+          Dipendenti per anno
+        </p>
+        <p style="text-align: center; margin-top: 5px" class="bold">
+          Anno 2022
+        </p>
+        <table
+          class="breakPage"
+          style="
+            width: 100%;
+            border: none !important;
+            border-spacing: 10px 5px;
+            border-collapse: separate;
+          "
+        >
+          <thead>
+            <tr>
+              <th style="border: none"></th>
+              <th
+                class="bold no-padding"
+                style="background-color: #f0f3f7; border: none"
+              >
+                I TRIM
+              </th>
+              <th
+                class="bold no-padding"
+                style="background-color: #f0f3f7; border: none"
+              >
+                II TRIM
+              </th>
+              <th
+                class="bold no-padding"
+                style="background-color: #f0f3f7; border: none"
+              >
+                III TRIM
+              </th>
+              <th
+                class="bold no-padding"
+                style="background-color: #f0f3f7; border: none"
+              >
+                IV TRIM
+              </th>
+              <th
+                class="bold no-padding"
+                style="background-color: #f0f3f7; border: none"
+              >
+                MEDIA
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">Dipendenti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">7</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">Autonomi</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">1</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">1</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">1</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">Addetti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">9</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">4</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">4</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">4</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- OPERATIVITÁ -->
+      <div class="containerPadding" id="OPERATIVITÁ" style="padding-bottom: 0">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 26pt"
+        >
+          OPERATIVITÁ
+        </p>
+        <p
+          class="regular no-padding"
+          style="margin-left: 10px; line-height: 22px"
+        >
+          Le indagini effettuate, promosse sulla base dei dati anagraﬁci
+          forniti, hanno come obiettivo principale la conferma dell'operatività
+          aziendale.
+          <br />Condotto preliminare accertamento presso i competenti Uffici del
+          Registro, si conferma che la Sede Legale è posta all'indirizzo sopra
+          indicato. Regolarmente registrata e, almeno cameralmente in
+          Scioglimento e Liquidazione dal 10/03/2022 di fatto sembrerebbe essere
+          non più Operativa. <br />Stando alle informazioni raccolte presso le
+          principali aziende e attività commerciali vicine, si ha conferma della
+          dismissione delle attività caratteristiche. <br />Contattato
+          telefonicamente la Liquidatrice, la sig.ra Cardini Sabini, conferma
+          che l'azienda non è più operante.
+        </p>
+      </div>
+      <!-- RECAPITI TELEFONICI -->
+      <div class="containerPadding" id="RECAPITI_TELEFONICI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 26pt"
+        >
+          RECAPITI TELEFONICI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          A seguito di consultazione dei pubblici elenchi abbiamo reperito le
+          seguenti utenze telefoniche riferibili al soggetto in esame.
+        </p>
+        <table style="border: none !important">
+          <tr>
+            <td style="border: none !important">
+              <p class="regular no-margin">Telefono fisso</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">0142 454259</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- PARTECIPAZIONI IMPRESA -->
+      <div style="margin-left: 10px" id="PARTECIPAZIONI_IN_IMPRESE">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 26pt"
+        >
+          PARTECIPAZIONI IMPRESA
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Da consultazione delle banche dati pubbliche tenute e messe a
+          disposizione dalle Camere di Commercio Italiane non sono state
+          rilevate partecipazioni in imprese a carico del soggetto in esame.
+        </p>
+      </div>
+      <!-- PARTECIPAZIONI SOCI AGGREDIBILI -->
+      <div class="containerPadding breakPage" id="PARTECIPAZIONI_IN_IMPRESE">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 26pt"
+        >
+          PARTECIPAZIONI SOCI AGGREDIBILI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Da consultazione del Registro Imprese tenuto dalle Camere di Commercio
+          Italiane non sono state rilevate partecipazioni dei soci aggredibili
+          in altre società.
+        </p>
+      </div>
+      <!-- SOCI AGGREDIBILI -->
+      <div class="containerPadding">
+        <p
+          class="bold"
+          style="
+            background-color: #fdf1e0;
+            margin: 20px 0;
+            padding: 10px;
+            text-align: center;
+          "
+        >
+          FULIGNANI SIMONE - FLGSMN78E27F023A
+        </p>
+        <p class="bold no-padding" style="border-bottom: 2px solid #6e6e6e">
+          1 IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE
+        </p>
+        <table style="width: 100%; border: none !important; margin-top: 20px">
+          <tbody>
+            <tr>
+              <td style="border: none !important; width: 30%">
+                <p class="regular__min no-margin">Codice fiscale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">01444510117</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Forma giuridica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  SOCIETA' IN ACCOMANDITA SEMPLICE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Capitale sociale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">10.000,00 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data deposito</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">17/04/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Numero protocollo</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">2020/15523</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Sede</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  VIA NILLO GARBUSI 13 19038 SARZANA L
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Stato attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">IN LIQUID.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Tipo attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  Ristorazione con somministrazione
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Ricavi</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">N/C</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold" style="margin-bottom: 5px">Cariche</p>
+        <p class="regular no-margin">SOCIO ACCOMANDATARIO dal 23/07/2020</p>
+        <p class="bold" style="margin-bottom: 5px">Azioni</p>
+        <div style="display: flex; width: 50%">
+          <p class="regular no-margin" style="width: 50%">Valore nominale</p>
+          <p class="regular no-margin">2.500,00 €</p>
+        </div>
+        <div style="display: flex; width: 50%">
+          <p class="regular no-margin" style="width: 50%">
+            Percentuale possesso
+          </p>
+          <p class="regular no-margin">25%</p>
+        </div>
+        <div style="display: flex; width: 50%">
+          <p class="regular no-margin" style="width: 50%">
+            Descrizione diritto
+          </p>
+          <p class="regular no-margin">PROPRIETA'</p>
+        </div>
+      </div>
+      <!-- NEGATIVITA -->
+      <div class="containerPadding" id="NEGATIVITA">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">NEGATIVITÁ</p>
+        <table style="width: 50%; border: none !important; margin-top: 50px">
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PROTESI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PREGIUDIZIEVOLI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PROCEDURE CONCORSUALI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #ff0000">SI</p>
+            </td>
+          </tr>
+        </table>
+        <p class="regular" style="line-height: 24px">
+          NOTE: Il controllo è stato effettuato sugli eventi negativi associati
+          alla persona o all'impresa richiesta negli ultimi 5 anni: in alcuni
+          casi potrebbero non essere rilevati i protesti pubblicati in CCIAA
+          privi del codice fiscale; l'esistenza di atti pregiudizievoli di
+          Conservatoria annotati per cancellazione totale non è rilevata; le
+          procedure vengono rilevate solo se esistenti sull'impresa richiesta o,
+          nel caso di persona fisica, su ditte individuali ad essa collegate.
+        </p>
+      </div>
+      <!-- PROCEDURE CONCORSUALi -->
+      <div class="containerPadding" id="PROCEDURE_CONCORSUALi">
+        <p class="bold no-padding" style="border-bottom: 2px solid #6e6e6e">
+          PROCEDURE CONCORSUALI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Attraverso la consultazione dell'apposito archivio che raccoglie, su
+          tutto il territorio nazionale, gli eventi negativi abbiamo appurato
+          che a carico del soggetto in esame nell'ultimo quinquennio sono
+          presenti le seguenti procedure concorsuali:
+        </p>
+
+        <p class="bold no-padding" style="border-bottom: 2px solid #6e6e6e">
+          1 IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE
+        </p>
+        <table style="width: 100%; border: none !important; margin-top: 20px">
+          <tbody>
+            <tr>
+              <td style="border: none !important; width: 30%">
+                <p class="regular__min no-margin">Codice fiscale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">01444510117</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Indirizzo</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  VIA NILLO GARBUSI 13 SARZANA La Spezia
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Atto</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">
+                  SCIOGLIMENTO E LIQUIDAZIONE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">Data registrazione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular__min no-margin">10/03/2022</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VEICOLI -->
+      <div class="containerPadding" id="VEICOLI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+        >
+          VEICOLI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Gli accertamenti effettuati in loco attraverso l’intervento dei nostri
+          corrispondenti locali e l’incrocio dei dati raccolti con la verifica
+          presso il Pubblico Registro Automobilistico, hanno evidenziato che il
+          soggetto in esame non risulta proprietario di veicoli.
+        </p>
+      </div>
+
+      <!-- IMMOBILI -->
+      <div style="margin-top: 80px" id="IMMOBILI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 30px"
+        >
+          IMMOBILI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Dalla consultazione degli appositi archivi degli Uffici Catastali
+          Divisione Territorio, non sono state rilevate proprietà immobiliari
+          intestate al soggetto in esame (salvo visura ipocatastale).
+        </p>
+      </div>
+      <!-- RAPPORTI BANCARI -->
+      <div class="breakPage" style="margin-top: 60px" id="RAPPORTI_BANCARI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 50px"
+        >
+          RAPPORTI BANCARI
+        </p>
+        <p class="regular" style="line-height: 24px">
+          Le indagini condotte presso le principali fonti economico-patrimoniali
+          hanno come obiettivo la rilevazione di posizioni bancarie nelle
+          disponibilità del soggetto investigato. A partire dalla zona di
+          residenza di quest'ultima, è stata condotta attività investigativa di
+          verifica che di fatto non ha portato alla luce alcuna posizione attiva
+          ed operativa.
+        </p>
+        <p class="regular" style="line-height: 24px">
+          Da quanto ricostruito – fatte salve recenti aperture e stando alle
+          informazioni raccolte sul campo – si conferma l'assenza di rapporti in
+          essere.
+        </p>
+        <p class="regular" style="line-height: 24px">
+          Si rilevano esclusivamente rapporti ad oggi non più in essere presso
+          l'Istituto indicato:
+        </p>
+        <p class="bold" style="background-color: #eeeeee; margin: 20px 0">
+          RAPPORTI ESTINTI
+        </p>
+        <p
+          class="bold no-padding"
+          style="
+            border-bottom: 2px solid #6e6e6e;
+            margin: 30px 0;
+            margin-left: 30px;
+          "
+        >
+          INTESA SANPAOLO SPA
+        </p>
+      </div>
+
+      <!-- PRINCIPALE ESPONENTE -->
+      <div id="PRINCIPALE_ESPONENTE">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 30px"
+        >
+          PRINCIPALE ESPONENTE - MARTINI DONATELLA
+        </p>
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 30px"
+        >
+          ANAGRAFICA
+        </p>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 30px">
+          <tbody>
+            <tr style="border: none">
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">COGNOME</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  MARTINI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">NOME</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  DONATELLA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">
+                  CODICE FISCALE
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  MRTDTL61B41A345R
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">
+                  DATA DI NASCITA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  01/02/1961
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">
+                  LUOGO DI NASCITA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  L'AQUILA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">
+                  PROVINCIA DI NASCITA
+                </p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">AQ</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">INDIRIZZO</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  VIA STATALE 17 2 A
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">CAP</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">67026</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">COMUNE</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">
+                  POGGIO PICENZE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="padding_td_th" style="width: 35%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: left">PROVINCIA</p>
+              </td>
+              <td class="padding_td_th" style="width: 65%">
+                <p class="regular no-margin" style="text-align: left">AQ</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- REPERIBILITÁ -->
+      <div
+        class="containerPadding"
+        id="REPERIBILITÁ"
+        style="padding-bottom: 0; margin-top: 50px"
+      >
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          REPERIBILITÁ
+        </p>
+        <p class="regular" style="line-height: 22px; padding-top: 10px">
+          Le indagini effettuate, promosse sulla base dei dati anagrafici
+          forniti, hanno come obiettivo principale l'acquisizione degli
+          indirizzi noti del soggetto investigato al fine di individuare quello
+          attuale. Consultate le principali fonti in loco, si rileva che
+          l'indirizzo sopra indicato può essere identificato come attuale
+          Residenza Anagraﬁca presso cui lo stesso ha stabilito il proprio
+          Domicilio.
+        </p>
+      </div>
+      <!-- RECAPITI TELEFONICI -->
+      <div
+        class="containerPadding breakPage"
+        id="RECAPITI_TELEFONICI"
+        style="padding-bottom: 0; margin-top: 50px"
+      >
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          RECAPITI TELEFONICI
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Durante i vari accertamenti effettuati atti al rintraccio del
+          soggetto, abbiamo reperito i seguenti recapiti telefonici in suo
+          utilizzo:
+        </p>
+        <table style="border: none !important">
+          <tr>
+            <td style="border: none !important">
+              <p class="regular no-margin">Telefono fisso</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">0142 454259</p>
+            </td>
+          </tr>
+        </table>
+      </div>
+      <!-- CARICHI IN IMPRESE -->
+      <div
+        class="containerPadding"
+        id="CARICHE_IN_IMPRESE"
+        style="padding-bottom: 0; padding-top: 0"
+      >
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-bottom: 26pt"
+        >
+          CARICHE IN IMPRESE
+        </p>
+        <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+          CARICHE IN IMPRESE ATTUALI
+        </p>
+        <p class="regular">
+          Da consultazione del Registro Imprese tenuto dalle Camere di Commercio
+          Italiane sono state rilevate le seguenti cariche in imprese attuali a
+          carico del soggetto in esame:
+        </p>
+        <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+          Socio accomandatario
+        </p>
+        <div style="display: flex; justify-content: space-between">
+          <table
+            style="
+              width: 55%;
+              border: none !important;
+              border-spacing: 10px 5px;
+              border-collapse: separate;
+            "
+          >
+            <tbody>
+              <tr style="border: none !important">
+                <td style="border: none !important; width: 40%">
+                  <p class="regular__min no-margin">Natura giuridica</p>
+                </td>
+                <td class="no-padding" style="border: none !important">
+                  <p class="regular__min no-margin">
+                    SOCIETA' IN ACCOMANDITA SEMPLICE
+                  </p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Ragione sociale</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE
+                  </p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Sede</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    VIA NILO GARBUSI 13 - 19038 SARZANA LA SPEZIA (SP)
+                  </p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Pec</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">ILBUSCAIOLSRL@PEC.IT</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table style="width: 40%; border: none; height: min-content">
+            <tbody>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Cod. Fiscale</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">01444510117</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">CCIAA/N.REA</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">SP202681</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Provincia</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">SP</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Stato società</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">IN LIQUID.</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table
+          style="width: 100%; border: none; border-top: 2px dotted #555555"
+        >
+          <tr style="border: none !important">
+            <td
+              style="border: none !important; width: 20%; padding-right: 20px"
+            >
+              <p class="regular">Cariche <br />cessate</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular">CONSIGLIERE</p>
+            </td>
+          </tr>
+        </table>
+        <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+          CARICHE IN IMPRESE PREGRESSE
+        </p>
+        <p class="regular">
+          Da consultazione del Registro Imprese tenuto dalle Camere di Commercio
+          Italiane sono state rilevate le seguenti cariche in imprese pregresse
+          a carico del soggetto in esame.
+        </p>
+      </div>
+      <!-- ATTIVITÁ LAVORATIVA -->
+      <div class="containerPadding" id="ATTIVITÁ_LAVORATIVA">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          ATTIVITÁ LAVORATIVA
+        </p>
+        <p class="regular" style="line-height: 22px">
+          Da consultazione del Registro Imprese tenuto dalle Camere di Commercio
+          Italiane è emerso che il soggetto risulta essere Titolare di Cariche
+          Attive. Attraverso l'intervento dei nostri corrispondenti locali sono
+          stati anche svolti accurati accertamenti al ﬁne di poter individuare
+          eventuale attività lavorativa alle dipendenze di terzi, che hanno dato
+          esito negativo.
+        </p>
+      </div>
+      <!-- SOCIO ACCOMANDATARIO -->
+      <div class="containerPadding" id="ATTIVITÁ_LAVORATIVA">
+        <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+          SOCIO ACCOMANDATARIO
+        </p>
+
+        <div style="padding: 0 10px">
+          <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+            DATI AZIENDA
+          </p>
+          <table
+            style="
+              width: 100%;
+              border: none;
+              border-spacing: 5px;
+              border-collapse: separate;
+            "
+          >
+            <tr style="border: none !important">
+              <td style="border: none !important; width: 30%">
+                <p class="regular no-margin">Denominazione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE
+                </p>
+              </td>
+            </tr>
+
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Note di veriﬁca</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">Azienda cessata di fatto</p>
+              </td>
+            </tr>
+          </table>
+        </div>
+        <p class="regular" style="font-style: italic; text-align: center">
+          Stato attivita: IN LIQUID. Attivita: Ristorazione con somministrazione
+        </p>
+      </div>
+      <!-- PARTECIPAZIONI IN IMPRESE -->
+      <div class="containerPadding breakPage" id="PARTECIPAZIONI_IN_IMPRESE">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          PARTECIPAZIONI IN IMPRESE
+        </p>
+        <p class="regular" style="line-height: 22px; margin-top: 30px">
+          Da consultazione delle banche dati pubbliche tenute e messe a
+          disposizione dalle Camere di Commercio Italiane sono state rilevate le
+          seguenti partecipazioni in imprese a carico del soggetto in esame:
+        </p>
+        <p class="bold" style="border-bottom: 1px solid #6e6e6e">
+          1 IL BUSCAIOL S.A.S. DI FULIGNANI SIMONE
+        </p>
+        <div style="display: flex; justify-content: space-between">
+          <table
+            style="
+              width: 55%;
+              border: none !important;
+              border-spacing: 10px 5px;
+              border-collapse: separate;
+            "
+          >
+            <tbody>
+              <tr style="border: none !important">
+                <td style="border: none !important; width: 40%">
+                  <p class="regular__min no-margin">Codice fiscale</p>
+                </td>
+                <td class="no-padding" style="border: none !important">
+                  <p class="regular__min no-margin">01444510117</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Forma giuridica</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    SOCIETA' IN ACCOMANDITA SEMPLICE
+                  </p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    Capitale sociale <br />Sede
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    VIA NILO GARBUSI 13 - 19038 SARZANA LA SPEZIA (SP)
+                  </p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Tipo attività</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">
+                    Ristorazione con somministrazione
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table style="width: 40%; border: none; height: min-content">
+            <tbody>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Data deposito</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">17/04/2020</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Numero <br />protocollo</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">2020/15523</p>
+                </td>
+              </tr>
+
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Stato attività</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">IN LIQUID.</p>
+                </td>
+              </tr>
+              <tr style="border: none !important">
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">Ricavi</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular__min no-margin">N/C</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <table
+          style="width: 100%; border: none; border-top: 2px dotted #555555"
+        >
+          <tr style="border: none !important">
+            <td
+              style="border: none !important; width: 20%; padding-right: 20px"
+            >
+              <p class="bold">Cariche</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular">SOCIO ACCOMANDATARIO</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular">Inizio carica 23/06/2020</p>
+            </td>
+          </tr>
+        </table>
+        <table
+          style="width: 100%; border: none; border-top: 2px dotted #555555"
+        >
+          <tr style="border: none !important">
+            <td style="border: none !important; width: 20%">
+              <p class="bold no-margin">Azioni</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">Valore nominale</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">2.500,00 €</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td
+              style="border: none !important; width: 20%; padding-right: 20px"
+            >
+              <p class="bold no-margin"></p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">Percentuale possesso</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">25%</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td
+              style="border: none !important; width: 20%; padding-right: 20px"
+            >
+              <p class="bold no-margin"></p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">Descrizione diritto</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">PROPRIETA'</p>
+            </td>
+          </tr>
+        </table>
+        <p class="regular" style="margin-top: 30px">
+          Avvertiamo che InfoCamere, la società che gestisce l'archivio per
+          conto delle Camere di Commercio e che ci fornisce questi dati,segnala
+          la presenza di possibili imperfezioni riguardanti la denominazione dei
+          Soci, ciò a causa di un non corretto abbinamento con il Codice
+          Fiscale. Il nostro fornitore garantisce, in ogni caso, che sono
+          costantemente in corso revisioni delle posizioni al fine di eliminare
+          totalmente il problema.
+        </p>
+      </div>
+      <!-- NEGATIVITA -->
+      <div class="container" id="NEGATIVITA">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">NEGATIVITÁ</p>
+        <table style="width: 50%; border: none !important; margin-top: 50px">
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PROTESTI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PREGIUDIZIEVOLI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+          <tr style="border: none !important">
+            <td style="border: none !important">
+              <p class="bold no-margin">PROCEDURE CONCORSUALI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+        </table>
+
+        <p class="regular" style="line-height: 22px">
+          NOTE: Il controllo è stato effettuato sugli eventi negativi associati
+          alla persona o all'impresa richiesta negli ultimi 5 anni: in alcuni
+          casi potrebbero non essere rilevati i protesti pubblicati in CCIAA
+          privi del codice fiscale; l'esistenza di atti pregiudizievoli di
+          Conservatoria annotati per cancellazione totale non è rilevata; le
+          procedure vengono rilevate solo se esistenti sull'impresa richiesta o,
+          nel caso di persona fisica, su ditte individuali ad essa collegate.
+        </p>
+      </div>
+      <!-- VEICOLI -->
+      <div class="breakPage" id="VEICOLI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+        >
+          VEICOLI
+        </p>
+        <p class="regular" style="margin-top: 30px">
+          Gli accertamenti effettuati in loco attraverso l’intervento dei nostri
+          corrispondenti locali e l’incrocio dei dati raccolti con la verifica
+          presso il Pubblico Registro Automobilistico, hanno evidenziato che il
+          soggetto in esame risulta proprietario dei veicoli sotto indicati:
+        </p>
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+        >
+          AUTOVEICOLO - EZ383WK
+        </p>
+        <div style="display: flex">
+          <table style="width: 50%; border: none !important">
+            <tbody>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Fabbrica
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    SMART
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Modello
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin">FORTWO COUPE</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Provincia
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">MS</p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    competenza
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left"></p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Serie targa
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    AUTOVEICOLO
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin">Flag giuridico</p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">S</p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <table
+            style="
+              width: 50%;
+              border: none !important;
+              border-spacing: 10px 5px;
+              border-collapse: separate;
+            "
+          >
+            <tbody>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Prima <br />immatricolazione
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    10/06/2015
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Telaio
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    WME4533421K031651
+                  </p>
+                </td>
+              </tr>
+
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Classe
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    AUTOVETTURA
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Ruolo soggetto
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    Intestatario
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Data ruolo
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    10/06/2015
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="margin-bottom: 5px">
+                    Quotazione
+                  </p>
+                </td>
+                <td style="border: none !important">
+                  <p class="regular no-margin" style="text-align: left">
+                    9.133,00 €
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <!-- IMMOBILI -->
+      <div class="" id="IMMOBILI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin-top: 30px"
+        >
+          IMMOBILI
+        </p>
+        <p class="regular" style="margin-top: 30px">
+          Dalla consultazione degli appositi archivi degli Uﬃci Catastali
+          Divisione Territorio, sono state rilevate le seguenti proprietà
+          immobiliari intestate al soggetto in esame (salvo visura
+          ipocatastale):
+        </p>
+      </div>
+      <!-- RAPPORTI BANCARI -->
+      <div id="RAPPORTI_BANCARI">
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; margin: 30px 0"
+        >
+          RAPPORTI BANCARI
+        </p>
+        <p class="regular">
+          Le indagini condotte presso le principali fonti economico-patrimoniali
+          hanno come obiettivo la rilevazione di posizioni bancarie nelle
+          disponibilità del soggetto investigato. A partire dalla zona di
+          residenza di quest'ultimo, è stata condotta attività investigativa di
+          veriﬁca che ha portato alla luce un rapporto di tipo personale ed un
+          ulteriore conto intestato alla ditta individuale presso l'Istituto
+          indicato:
+        </p>
+        <p class="bold" style="background-color: #eeeeee; margin: 20px 0">
+          RAPPORTI ATTIVI
+        </p>
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          MONTE DEI PASCHI DI SIENA SPA - MASSA - CONTO CORRENTE
+        </p>
+        <table style="width: 100%; border: none !important">
+          <tbody>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">PARTITA IVA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">00884060526</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">ABI</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">01030</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">CAB</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">13600</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="bold no-margin">INDIRIZZO</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  Piazza Aranci 9 - 54100 Massa (MS)
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold no-margin" style="margin-top: 30px">
+          Movimentazione:
+          <span class="regular"
+            >Non si rilevano indicazioni circa l’andamento attuale.</span
+          >
+        </p>
+        <p class="bold no-margin">
+          Accrediti:
+          <span class="regular"
+            >Non è stato possibile determinare se vi siano accredi
+            periodici.</span
+          >
+        </p>
+        <p class="bold no-margin">
+          Criticitá:
+          <span class="regular"
+            >Non è stato possibile determinare se vi siano delle criticità sulla
+            gestione ordinaria.</span
+          >
+        </p>
+        <p class="regular no-margin">
+          Si consiglia di agire tempestivamente nell’utilizzo delle suddette
+          informazioni.
+        </p>
+      </div>
+      <p class="bold" style="background-color: #eeeeee; margin: 20px 0">
+        RAPPORTI CENSITI
+      </p>
+      <p
+        class="bold no-padding"
+        style="
+          border-bottom: 2px solid #6e6e6e;
+          margin: 30px 0;
+          margin-left: 30px;
+        "
+      >
+        INTESA SANPAOLO SPA
+      </p>
+    </div>
+    <script>
+      function cutNumber(number, digitsAfterDot) {
+        const str = `${number}`;
+
+        return str.slice(0, str.indexOf(".") + digitsAfterDot + 1);
+      }
+      function getPageOfParagraph(nameDiv, numberOfBreak) {
+        const heightPage = 842;
+        var offsetHeight =
+          document.getElementsByTagName("html")[0].offsetHeight;
+        let offsetDiv = document.getElementById(nameDiv).offsetTop;
+        const pageNumber = offsetDiv / heightPage;
+        // const nuumberCut = cutNumber(Number(pageNumber), 0);
+        const result = Number(Number(pageNumber).toFixed(0)) + 1;
+        console.log(nameDiv + " -> " + result + " -> " + pageNumber);
+        return result;
+      }
+
+      const arrayOfIndex = [
+        "RIEPILOGO_INDAGINE",
+        "ANAGRAFICA_IMRESA",
+        "OPERATIVITÁ",
+        "ANAGRAFICA_TITOLARE",
+        "REPERIBILITÀ",
+        "RECAPITI_TELEFONICI",
+        "CARICHE_IN_IMPRESE",
+        "ATTIVITÁ_LAVORATIVA",
+        "PARTECIPAZIONI_IN_IMPRESE",
+      ];
+
+      for (let i = 0; i < arrayOfIndex.length; i++) {
+        let div = document.getElementsByClassName("contenuti__row__dx");
+        let p = div[i].getElementsByClassName("regular");
+        p.item(0).innerHTML = getPageOfParagraph(arrayOfIndex[i]);
+      }
+    </script>
+  </body>
+</html>
