@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .breakPage {
+        page-break-after: always;
+      }
+
+      .bold {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: bold;
+        font-family: "Calibri";
+        padding: 0 10px;
+      }
+      .regular {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: normal;
+        font-family: "Calibri";
+        padding: 0 10px;
+      }
+      .no-margin {
+        margin: 0;
+      }
+      .no-padding {
+        padding: 0;
+      }
+      .regular__min {
+        color: #1f497d;
+        font-size: 10pt;
+        font-weight: normal;
+        font-family: "Calibri";
+        padding: 0 10px;
+      }
+
+      .container {
+        padding: 30px;
+      }
+
+      .containerPadding {
+        padding: 0px;
+      }
+
+      .container__title {
+        text-align: end;
+        width: 100%;
+        border-bottom: 2px solid #6e6e6e;
+      }
+
+      .container__title__title {
+        color: #023671;
+        font-size: 24pt !important;
+        font-family: "Calibri";
+        font-weight: normal;
+      }
+
+      h1.container__title__title {
+        margin-bottom: 4px !important;
+      }
+      h3.container__title__subtitle {
+        margin-top: 4px !important;
+      }
+
+      .container__title__subtitle {
+        color: #023671;
+        font-size: 16pt !important;
+        font-family: "Calibri";
+        font-weight: normal;
+      }
+
+      .cellSx {
+        text-align: center;
+        background-color: #eeeeee !important;
+        width: 50%;
+      }
+
+      .cellDx {
+        text-align: center;
+        width: 50%;
+      }
+
+      table {
+        border: 1px solid #333;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+      }
+
+      /* NB */
+
+      .container__nb {
+        margin-top: 180px;
+        width: 100%;
+      }
+      /* INDICE */
+
+      .container__contenuti {
+        padding-top: 0pt;
+        padding-bottom: 0;
+      }
+      .container__inner_contenuti {
+        padding: 1rem;
+      }
+
+      .contentuti__row {
+        display: flex;
+        width: 100%;
+      }
+
+      .contenuti__row__sx {
+        width: 90%;
+        border-bottom: 1px dotted #ccc;
+      }
+      .contenuti__row__dx {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="container__title">
+          <h1 class="container__title__title">Cribis Search Light</h1>
+          <h3 class="container__title__subtitle">
+            Persona giuridica no corporate
+          </h3>
+        </div>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 50px">
+          <thead>
+            <th colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                RENZO FERRANTE
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  INFORMAZIONE N°
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  8035223
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RIF. CLIENTE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  CRIBISCM5152/899263/TLMB2B
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  DATA RICHIESTA
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  06/03/2023
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  DATA EVASIONE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  27/03/2023
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 50px">
+          <thead>
+            <th colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                DATI INPUT
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">COGNOME</p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  ADINOLFI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">NOME</p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  AMELY
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  CODICE FISCALE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  DNLMLY75B48H703K
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  NOME PRODOTTO
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  CRIBIS SEARCH APPROFONDITO
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- N.B. -->
+        <div class="container__nb breakPage">
+          <span class="bold">N.B.</span>
+          <p class="regular__min">
+            Le informazioni ed i dati forniti dalla nostra azienda alla propria
+            clientela, sono raccolti e trattati secondo quanto disposto dal D.
+            Lgs. 196 del 2003 e dal nuovo RE 679/2016. I clienti possono quindi
+            utilizzare i dati e le informazioni fornite secondo le modalità
+            previste dalla legge per la tutela dei propri diritti.
+            L’informazione ha natura strettamente riservata, personale e
+            confidenziale, pertanto non può essere divulgata a terzi e tantomeno
+            in sede giudiziaria in quanto le informazioni presenti non sono
+            supportate da prove documentali. Ci esimiamo da qualsiasi
+            responsabilità consequenziale, di natura civile, penale derivanti da
+            dette violazioni. E’ sin da ora escluso qualunque titolo e motivo di
+            azione di rivalsa per le notizie fornite.
+          </p>
+        </div>
+        <!-- INDICE -->
+        <div class="container__contenuti breakPage">
+          <p class="bold">Contenuti</p>
+          <div class="container__inner_contenuti">
+            <a href="#RIEPILOGO_INDAGINE" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">RIEPILOGO INDAGINE</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular" id="indice_riepilogo_indagine"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#ANAGRAFICA" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">ANAGRAFICA</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#REPERIBILITÁ" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">REPERIBILITÁ</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#RECAPITI_TELEFONICI" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">RECAPITI TELEFONICI</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#CARICHE_IN_IMPRESE" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">CARICHE IN IMPRESE</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#ATTIVITÁ_LAVORATIVA" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">ATTIVITÁ LAVORATIVA</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#PARTECIPAZIONI_IN_IMPRESE" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">PARTECIPAZIONI IN IMPRESE</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#NEGATIVITÁ" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">NEGATIVITÁ</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#VEICOLI" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">VEICOLI</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+            <a href="#IMMOBILI" style="text-decoration: none">
+              <div class="contentuti__row">
+                <div class="contenuti__row__sx">
+                  <p class="regular">IMMOBILI</p>
+                </div>
+                <div class="contenuti__row__dx">
+                  <span class="regular"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <!-- RIEPILOGO INDAGINE -->
+        <div
+          class="container_riepilogo_indagine breakPage"
+          id="RIEPILOGO_INDAGINE"
+        >
+          <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+            RIEPILOGO INDAGINE
+          </p>
+          <!-- TABELLA -->
+          <table style="width: 100%; margin-top: 50px">
+            <thead>
+              <th colspan="2">
+                <p class="bold no-margin" style="text-align: center">
+                  IMPRESA POMPE FUNEBRI ZENONI E SCARPONI SNC DI ZENONI ENZO E
+                  ZENONI MAURIZIO
+                </p>
+              </th>
+            </thead>
+            <tbody>
+              <tr style="border: none">
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    ANAGRAFICA IMPRESA
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTE
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    OPERATIVITÀ
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    CONFERMATA
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    RECAPITI TELEFONICI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    PARTECIPAZIONI IN IMPRESE
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    PARTECIPAZIONI SOCI AGGREDIBILI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    NEGATIVITÁ
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    VEICOLI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    IMMOBILI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTE
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    RAPPORTI BANCARI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <!-- TABELLA -->
+          <table style="width: 100%; margin-top: 50px">
+            <thead>
+              <th colspan="2">
+                <p class="bold no-margin" style="text-align: center">
+                  ZENONI MAURIZIO
+                </p>
+              </th>
+            </thead>
+            <tbody>
+              <tr style="border: none">
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    ANAGRAFICA
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTE
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    REPERIBILITÀ
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    CONFERMATA
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    RECAPITI TELEFONICI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    CARICHE IN IMPRESE ATTUALI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    CARICHE IN IMPRESE PREGRESSE
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    ATTIVITÁ LAVORATIVA
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    PARTECIPAZIONI IN IMPRESE
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    NEGATIVITÁ
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    PRESENTE
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    VEICOLI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #ff0000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    IMMOBILI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+              <tr>
+                <td style="width: 50%; background: #eeeeee">
+                  <p class="bold no-margin" style="text-align: center">
+                    RAPPORTI BANCARI
+                  </p>
+                </td>
+                <td style="width: 50%">
+                  <p
+                    class="regular no-margin"
+                    style="text-align: center; color: #008000"
+                  >
+                    NON PRESENTI
+                  </p>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
