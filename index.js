@@ -1,10 +1,7 @@
 var fs = require("fs");
 var html_to_pdf = require("html-pdf-node");
 
-var htmlRead = fs.readFileSync(
-  "Cribis_Platinum_Approfondito/index.html",
-  "utf8"
-);
+var htmlRead = fs.readFileSync("Cribis_Search_Light_Snc/index.html", "utf8");
 var base64ImageHeader = fs.readFileSync("./logo.png", "base64");
 var base64ImageFooter = fs.readFileSync("./Rectangle.png", "base64");
 
@@ -41,5 +38,5 @@ let options = {
 let file = { content: htmlRead };
 
 html_to_pdf.generatePdf(file, options).then((pdfBuffer) => {
-  fs.writeFileSync("Cribis_Platinum_Approfondito.pdf", pdfBuffer);
+  fs.writeFileSync("Cribis_Search_Light_Snc.pdf", pdfBuffer);
 });
