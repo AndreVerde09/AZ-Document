@@ -1,0 +1,3109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .content {
+        padding: 10px 40px;
+      }
+      .breakPage {
+        page-break-after: always;
+      }
+
+      .bold {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: bold;
+        padding: 0 10px;
+      }
+      .regular {
+        color: #1f497d;
+        font-size: 12pt;
+        font-weight: normal;
+        padding: 0 10px;
+      }
+      .regular__min {
+        color: #1f497d;
+        font-size: 10pt;
+        font-weight: normal;
+        margin-top: 5px;
+        padding: 0 10px;
+      }
+      .no-margin {
+        margin: 0;
+      }
+      .no-padding {
+        padding: 0;
+      }
+
+      .container__title {
+        text-align: end;
+        width: 100%;
+        border-bottom: 2px solid #6e6e6e;
+      }
+
+      .container__title__title {
+        color: #023671;
+        font-size: 24pt !important;
+        font-weight: normal;
+      }
+
+      h1.container__title__title {
+        margin-bottom: 4px !important;
+      }
+      h3.container__title__subtitle {
+        margin-top: 4px !important;
+      }
+
+      .container__title__subtitle {
+        color: #023671;
+        font-size: 16pt !important;
+        font-weight: normal;
+      }
+
+      .cellSx {
+        text-align: center;
+        background-color: #eeeeee !important;
+        width: 50%;
+      }
+
+      .cellDx {
+        text-align: center;
+        width: 50%;
+      }
+
+      table {
+        border: 1px solid #333;
+        border-spacing: 0;
+        border-collapse: collapse;
+      }
+
+      td,
+      th {
+        border: 1px solid #333;
+        vertical-align: top;
+      }
+
+      .marginTd {
+        margin: 0;
+        margin-bottom: 5px;
+      }
+
+      /* NB */
+
+      .container__nb {
+        margin-top: 200px;
+        width: 100%;
+      }
+      /* INDICE */
+
+      .container__contenuti {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+      .container__inner_contenuti {
+        padding: 0 1.5rem;
+      }
+
+      .contentuti__row {
+        display: flex;
+        width: 100%;
+      }
+
+      .contentuti__row > div:first-child {
+        width: 90%;
+        border-bottom: 2px dotted #555555;
+      }
+
+      .contentuti__row > div:first-child > p {
+        font-size: 10pt;
+        margin: 0.5rem 0;
+        padding: 0;
+      }
+
+      .contenuti__row__dx {
+        width: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      p {
+        line-height: 18px;
+      }
+
+      /* PIE CHART */
+
+      .pie {
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        border: 60px solid #023671;
+      }
+
+      .chart {
+        position: relative;
+        width: 200px;
+        height: 200px;
+      }
+
+      .donut-default {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+
+      .donut-line {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      .donut-text {
+        top: 25px;
+        left: 25px;
+        width: 150px;
+        height: 150px;
+        background: #fff;
+        position: absolute;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 3;
+      }
+
+      .chart .donut-case {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #023671;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-clip: border-box;
+        overflow: hidden;
+      }
+
+      .chart .donut-case::before {
+        content: "";
+        clip: rect(0 100px 150px 0);
+        -webkit-transform: rotate(327.6deg);
+        transform: rotate(180deg);
+        background: gray;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 50%;
+      }
+
+      .chart .donut-case::after {
+        content: "";
+        clip: rect(0 100px 200px 0);
+        -webkit-transform: rotate(327.6deg);
+        transform: rotate(270deg);
+        background: #023671;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      .chart .donut-line::before {
+        content: "";
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        top: -25px;
+        left: 50%;
+        background: #fff;
+        z-index: 2;
+      }
+
+      .chart .donut-line::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        position: absolute;
+        top: 50%;
+        left: 25px;
+        transform: rotate(180deg);
+        background: white;
+        border-bottom: 1px solid white;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="container">
+        <div class="container__title">
+          <h1 class="container__title__title">Cribis Search Light</h1>
+          <h3 class="container__title__subtitle">
+            Persona giuridica corporate
+          </h3>
+        </div>
+        <table style="width: 100%; margin-top: 50px">
+          <thead>
+            <th colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                BAR LUNA S.R.L.
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  INFORMAZIONE N°
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  5956641
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RIF. CLIENTE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  TLMB2B/906650/CRIBISCM64544
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  DATA RICHIESTA
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  29/09/2021
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  DATA EVASIONE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  20/10/2021
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="width: 100%; margin-top: 50px">
+          <thead>
+            <th colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                DATI INPUT
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  DENOMINAZIONE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  BAR LUNA SRL
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  CODICE FISCALE
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  06797201214
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  TIPO_ELAB
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  cribis_search_l
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  NOME PRODOTTO
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p class="regular no-margin" style="text-align: center">
+                  Cribis SEARCH Light
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- N.B. -->
+      <div class="container__nb breakPage">
+        <span class="bold">N.B.</span>
+        <p class="regular__min">
+          Le informazioni ed i dati forniti dalla nostra azienda alla propria
+          clientela, sono raccolti e trattati secondo quanto disposto dal D.
+          Lgs. 196 del 2003 e dal nuovo RE 679/2016. I clienti possono quindi
+          utilizzare i dati e le informazioni fornite secondo le modalità
+          previste dalla legge per la tutela dei propri diritti. L’informazione
+          ha natura strettamente riservata, personale e confidenziale, pertanto
+          non può essere divulgata a terzi e tantomeno in sede giudiziaria in
+          quanto le informazioni presenti non sono supportate da prove
+          documentali. Ci esimiamo da qualsiasi responsabilità consequenziale,
+          di natura civile, penale derivanti da dette violazioni. E’ sin da ora
+          escluso qualunque titolo e motivo di azione di rivalsa per le notizie
+          fornite.
+        </p>
+      </div>
+      <!-- INDICE -->
+      <div class="container__contenuti breakPage">
+        <p class="bold">Contenuti</p>
+        <div class="container__inner_contenuti">
+          <a href="#RIEPILOGO_INDAGINE" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RIEPILOGO INDAGINE</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular" id="indice_riepilogo_indagine"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#ANAGRAFICA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">ANAGRAFICA IMPRESA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#OPERATIVITA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">OPERATIVITÀ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#RECAPITI_TELEFONICI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RECAPITI TELEFONICI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#PARTECIPAZIONI_IMPRESA" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">PARTECIPAZIONI IMPRESA</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a
+            href="#PARTECIPAZIONI_SOCI_AGGREDIBILI"
+            style="text-decoration: none"
+          >
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">PARTECIPAZIONI SOCI AGGREDIBILI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#NEGATIVITÁ" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">NEGATIVITÁ</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+
+          <a href="#VEICOLI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">VEICOLI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#IMMOBILI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">IMMOBILI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+          <a href="#RAPPORTI_BANCARI" style="text-decoration: none">
+            <div class="contentuti__row">
+              <div>
+                <p class="regular">RAPPORTI BANCARI</p>
+              </div>
+              <div class="contenuti__row__dx">
+                <span class="regular"></span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- RIEPILOGO INDAGINE -->
+      <div
+        class="container_riepilogo_indagine breakPage"
+        id="RIEPILOGO_INDAGINE"
+      >
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">
+          RIEPILOGO INDAGINE
+        </p>
+        <!-- TABELLA -->
+        <table style="width: 100%; margin-top: 50px">
+          <thead>
+            <th colspan="2">
+              <p class="bold no-margin" style="text-align: center">
+                BAR LUNA S.R.L.
+              </p>
+            </th>
+          </thead>
+          <tbody>
+            <tr style="border: none">
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  ANAGRAFICA IMPRESA
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTE
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  OPERATIVITÀ
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  CONFERMATA
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RECAPITI TELEFONICI
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  PARTECIPAZIONI IMPRESA
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  PARTECIPAZIONI SOCI AGGREDIBILI
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  NEGATIVITÀ
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">VEICOLI</p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #ff0000"
+                >
+                  NON PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  IMMOBILI
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="width: 50%; background: #eeeeee">
+                <p class="bold no-margin" style="text-align: center">
+                  RAPPORTI BANCARI
+                </p>
+              </td>
+              <td style="width: 50%">
+                <p
+                  class="regular no-margin"
+                  style="text-align: center; color: #008000"
+                >
+                  PRESENTI
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- ANAGRAFICA IMPRESA -->
+      <div class="container" id="ANAGRAFICA_IMPRESA">
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">ANAGRAFICA</p>
+        <!-- TABELLA -->
+        <table style="width: 100%; border: none !important; margin-top: 40px">
+          <tbody>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Ragione Sociale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">BAR LUNA S.R.L.</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Cod. Fiscale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Partita IVA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Cod.CCIAA/N.REA</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">AL303346</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Sede</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  VIALE DEI COLLI PORTUENSI 322 - 00151 ROMA (RM)
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Forma giuridica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  Societa' A Responsabilita' Limitata
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Stato società</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">REGISTRATA</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Data inizio attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">06/08/2021</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Capitale sociale</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">65.150,00 €</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Attività</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  56.3 - Bar E Altri Esercizi Simili Senza Cucina
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Codice RAE</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">
+                  660 - SERVIZI DEGLI ALBERGHI E PUBBLICI ESERCIZI
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Codice SAE</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">430 - IMPRESE PRODUTTIVE</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Email certiﬁcata</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">BARLUNASRL@LAMIAPEC.IT</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Data costituzione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">28/07/2021</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Data termine</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">28/07/2021</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="bold">Sistema di amministrazione e controllo</p>
+        <table style="width: 60%; border: none !important; margin-top: 0">
+          <tbody>
+            <tr>
+              <td style="border: none !important; width: 30%">
+                <p class="regular no-margin">Forma amministrativa</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">AMMINISTRATORE UNICO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Sistema di amministrazione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">Amministratore Unico</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Forma amministrativa in carica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">AMMINISTRATORE UNICO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">Durata amministrativa in carica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">A tempo indeterminato</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none !important">
+                <p class="regular no-margin">N.amministratori in carica</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">1</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold" style="background-color: #eeeeee; padding: 5px 15px">
+          EVENTI LEGALI
+        </p>
+        <p
+          class="bold no-margin"
+          style="border-bottom: 2px solid #6e6e6e; padding-bottom: 5px"
+        >
+          Procedure legali
+        </p>
+        <table style="width: 85%; border: none !important">
+          <tr style="border: none !important">
+            <td style="border: none !important; width: 45%">
+              <p
+                class="bold no-margin"
+                style="
+                  background-color: #eeeeee;
+                  text-align: center;
+                  padding: 2.5px;
+                "
+              >
+                Fallimento
+              </p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">Data iscrizione</p>
+              <p class="regular no-margin">Data provvedimento</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin">11/07/2018</p>
+              <p class="regular no-margin">11/07/2018</p>
+            </td>
+          </tr>
+        </table>
+        <p class="bold">Annotazioni evento</p>
+        <p class="regular">
+          CON FALLIMENTO N. 874/21 EMESS0 IN DATA 21/12/2021 IL TRIBUNALE DI
+          ROMA HA NOMINATO CURATORE FALLIMENTARE FEMIA MASSIMO.
+        </p>
+        <!-- BILANCIO -->
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">BILANCIO</p>
+        <p class="regular">
+          I dati di bilancio riportati sono tratti dai documenti originali
+          depositati dall'impresa in camera di commercio in conformità alla
+          quarta direttiva CEE. In particolare:il valore della produzione e'
+          costituito dalle seguenti voci (qualora specificate): ricavi delle
+          vendite e delle prestazioni, variazioni delle rimanenze di prodotti in
+          lavorazione, semilavorati e finiti, variazioni dei lavori in corso,
+          Incrementi di immobilizzazioni per lavori interni, altri ricavi e
+          proventi. Il fatturato s'intende dato dalle seguenti voci:
+          Industriali,Commerciali e di Servizi: Ricavi delle Vendite e delle
+          Prestazioni; Pluriennali: Ricavi delle Vendite e delle Prestazioni +
+          Variazioni dei Lavori in corso.
+        </p>
+        <p class="bold">Sintesi bilancio</p>
+        <!-- TABELLA -->
+        <table
+          style="
+            border-spacing: 10px;
+            border: none !important;
+            border-collapse: separate;
+          "
+        >
+          <thead style="border: none !important">
+            <tr style="border: none !important">
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Voce di bilancio</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Importo 2018</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Var %</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Importo 2019</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Var %</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">Importo 2019</p>
+              </th>
+            </tr>
+            <tr>
+              <th style="border: none !important"></th>
+              <th style="border: none !important"></th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">2018 / 2019</p>
+              </th>
+              <th style="border: none !important"></th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">2019 / 2020</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody style="border: none !important">
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Valore della produzione</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">994.773,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">-93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">72,25</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Ricavi</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">994.773,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">-93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">-100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="regular no-margin">Fatturato</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">994.773,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">-93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">-100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Cash-flow</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">utile/Perdita</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Attivo</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="regular no-margin">Credito verso i soci</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="regular no-margin">Immobilizzazioni</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Patrimonio netto</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="regular no-margin">TFR</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="regular no-margin">Numero dipendenti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">-48.768,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">93,60</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">63.625,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="color: red">100,00</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin">109.593,00</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold" style="border-bottom: 2px solid #6e6e6e">SOCI</p>
+        <div style="display: flex; align-items: center; gap: 40px">
+          <div class="chart">
+            <div class="donut-default"></div>
+            <div class="donut-text"></div>
+            <div class="donut-case"></div>
+            <div class="donut-line"></div>
+          </div>
+          <div>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div
+                style="width: 10px; height: 10px; background-color: #023671"
+              ></div>
+              <span>SCHICCHI GIORGIO</span>
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px">
+              <div
+                style="width: 10px; height: 10px; background-color: gray"
+              ></div>
+              <span>DE CAROLIS RICCARDO</span>
+            </div>
+          </div>
+        </div>
+        <p
+          class="bold"
+          style="border-bottom: 2px solid #6e6e6e; padding-bottom: 5px"
+        >
+          Dipendenti per anno
+        </p>
+        <p class="bold no-margin" style="text-align: center">Anno 2019</p>
+        <table
+          style="
+            border-spacing: 10px;
+            border: none !important;
+            width: 100%;
+            border-collapse: separate;
+          "
+        >
+          <thead style="border: none !important">
+            <tr style="border: none !important">
+              <th style="border: none !important">
+                <p class="bold no-margin"></p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">I TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">II TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">III TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">IV TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">MEDIA</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody style="border: none !important">
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Dipendenti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Autonomi</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">0</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">0</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Addetti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold" style="margin-top: 30px; text-align: center">ROMA</p>
+        <table
+          style="
+            border-spacing: 10px;
+            border: none !important;
+            width: 100%;
+            border-collapse: separate;
+          "
+          class="breakPage"
+        >
+          <thead style="border: none !important">
+            <tr style="border: none !important">
+              <th style="border: none !important">
+                <p class="bold no-margin"></p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">I TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">II TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">III TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">IV TRIM</p>
+              </th>
+              <th style="background-color: #eeeeee; border: none !important">
+                <p class="bold no-margin">MEDIA</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody style="border: none !important">
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Dipendenti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Autonomi</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">0</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">0</p>
+              </td>
+            </tr>
+            <tr style="border: none !important">
+              <td style="border: none !important">
+                <p class="bold no-margin">Addetti</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin"></p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+              <td style="border: none !important">
+                <p class="regular no-margin" style="text-align: center">2</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- OPERATIVITA -->
+      <p class="bold" style="border-bottom: 2px solid #6e6e6e">OPERATIVITA'</p>
+      <p class="regular" style="text-align: justify">
+        Le indagini effettuate, promosse sulla base dei dati anagrafici forniti,
+        hanno come obiettivo principale la conferma dell'operavità aziendale.
+        Condoo preliminare accertamento presso i competen Uffici del Registro,
+        si conferma che la Sede Legale è posta all'indirizzo sopra indicato.
+        Regolarmente registrata , di fao sembrerebbe essere non più Operava.
+        Stando alle informazioni raccolte presso le principali aziende e avità
+        commerciali vicine,si ha conferma della dismissione delle avità
+        caraerische. Non è stato possibile avere indicazioni circa un
+        eventuale spostamento disede che possa non ancora essere stato
+        ufficializzato presso i competen Uffici.
+      </p>
+      <!-- RECAPITI TELEFONICI -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        RECAPITI TELEFONICI
+      </p>
+      <p class="regular">
+        A seguito di consultazione dei pubblici elenchi non abbiamo reperito
+        utenze telefoniche riferibili al soggetto in esame.
+      </p>
+      <p class="regular">
+        Telefono fisso &#160;&#160;&#160;063055454 &#160;&#160;&#160;Avv. Femia
+        Giovanni - Curatore Fallimentare
+      </p>
+      <!-- PARTECIPAZIONE IN IMPRESA -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        PARTECIPAZIONE IN IMPRESA
+      </p>
+      <p class="regular">
+        Da consultazione delle banche dati pubbliche tenute e messe a
+        disposizione dalle Camere di Commercio Italiane non sono state rilevate
+        partecipazioni in imprese a carico del soggetto in esame.
+      </p>
+      <!-- PARTECIPAZIONI SOCI AGGREDIBILI -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        PARTECIPAZIONI SOCI AGGREDIBILI
+      </p>
+      <p class="regular breakPage">
+        La forma giuridica dell'impresa non prevede soci legalmente aggredibili.
+      </p>
+
+      <!-- NEGATIVITA -->
+      <p class="bold" style="border-bottom: 2px solid #6e6e6e">NEGATIVITA'</p>
+      <table style="width: 50%; border: none !important">
+        <tbody>
+          <tr>
+            <td style="border: none !important">
+              <p class="bold no-margin">PROTESTI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #ff0000">SI</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: none !important">
+              <p class="bold no-margin">PREGIUDIZIEVOLI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #008000">NO</p>
+            </td>
+          </tr>
+          <tr>
+            <td style="border: none !important">
+              <p class="bold no-margin">PROCEDURE CONCORSUALI</p>
+            </td>
+            <td style="border: none !important">
+              <p class="regular no-margin" style="color: #ff0000">SI</p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="regular" style="text-align: justify">
+        NOTE: Il controllo è stato effettuato sugli eventi negativi associati
+        alla persona o all'impresa richiesta negli ultimi 5 anni: in alcuni casi
+        potrebbero non essere rilevati i protesti pubblicati in CCIAA privi del
+        codice fiscale; l'esistenza di atti pregiudizievoli di Conservatoria
+        annotati per cancellazione totale non è rilevata; le procedure vengono
+        rilevate solo se esistenti sull'impresa richiesta o, nel caso di persona
+        fisica, su ditte individuali ad essa collegate
+        <!-- PROTESTI -->
+      </p>
+
+      <p class="bold" style="border-bottom: 2px solid #6e6e6e">PROTESTI</p>
+      <div style="padding-left: 10px">
+        <p class="regular">
+          Attraverso la consultazione dell'Archivio Informatico Protesti tenuto
+          dalle Camere di Commercio, nell'ultimo quinquennio sono stati rilevati
+          i seguenti titoli protestati:
+        </p>
+        <p
+          class="bold no-margin"
+          style="border-bottom: 2px solid #6e6e6e; text-align: center"
+        >
+          INFORMAZIONI EVENTI NEGATIVI - PROTESTI
+        </p>
+        <table style="width: 100%; border: none !important">
+          <tbody>
+            <tr>
+              <td style="border: none; width: 25%">
+                <p class="regular no-margin no-padding">Sintesi protesti</p>
+              </td>
+              <td style="border: none">
+                <p class="regular no-margin no-padding">
+                  Sono stati reperiti n.19 protesti per un importo complessivo
+                  di 12.160,00 EURO
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <table style="width: 100%; border: none !important">
+          <tbody>
+            <tr>
+              <td style="border: none; width: 25%"></td>
+              <td style="border: none; width: 25%">
+                <p class="bold no-margin no-padding">Tipo effetto</p>
+              </td>
+              <td style="border: none; width: 25%">
+                <p class="bold no-margin no-padding">Numero <br />effetti</p>
+              </td>
+              <td style="border: none; width: 25%">
+                <p class="bold no-margin no-padding">Importo</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 25%"></td>
+              <td style="border: none; width: 25%">
+                <p class="regular no-margin no-padding">Cambiale</p>
+              </td>
+              <td style="border: none; width: 25%">
+                <p class="regular no-margin no-padding">19</p>
+              </td>
+              <td style="border: none; width: 25%">
+                <p class="regular no-margin no-padding">12.160,00 EURO</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p
+          class="regular no-margin no-padding"
+          style="text-align: center; margin: 10px 0"
+        >
+          L'ultimo protesto risale al 10/06/2020
+        </p>
+
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          1 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          2 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          3 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          4 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          5 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          6 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          7 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          8 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          9 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          10 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          11 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          12 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          13 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          14 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          15 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          16 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          17 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          18 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          19 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Indirizzo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  V.LE DEI COLLI PORTUENSI 322 ROMA ( RM )
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Levata</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tipo di effetto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">Cambiale</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Importo</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">640,00 EURO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Causale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">
+                  Il domiciliatario non paga per mancanza di istruzioni
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- PROCEDURE CONCORSUALI -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        PROCEDURE CONCORSUALI
+      </p>
+      <div style="padding-left: 10px">
+        <p class="regular" style="text-align: justify">
+          Attraverso la consultazione dell'apposito archivio che raccoglie, su
+          tutto il territorio nazionale, gli eventi negativi abbiamo appurato
+          che a carico del soggetto in esame nell'ultimo quinquennio sono
+          presenti le seguenti procedure concorsuali:
+        </p>
+        <p class="bold marginTd" style="border-bottom: 2px solid #6e6e6e">
+          19 BAR LUNA S.R.L.
+        </p>
+        <table
+          style="
+            width: 100%;
+            border: none !important;
+            margin-left: 10px;
+            margin-bottom: 10px;
+          "
+        >
+          <tbody>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Codice fiscale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">05240351006</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Tribunale</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">ROMA - N. 874/21</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Atto</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">FALLIMENTO</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data iscrizione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+            <tr>
+              <td style="border: none; width: 30%">
+                <p class="regular marginTd no-padding">Data registrazione</p>
+              </td>
+              <td style="border: none">
+                <p class="regular marginTd no-padding">04/03/2020</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- VEICOLI -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        VEICOLI
+      </p>
+      <p class="regular">
+        Gli accertamenti effettuati in loco attraverso l’intervento dei nostri
+        corrispondenti locali e l’incrocio dei dati raccolti con la verifica
+        presso il Pubblico Registro Automobilistico, hanno evidenziato che il
+        soggetto in esame non risulta proprietario di veicoli
+      </p>
+
+      <!-- IMOBILI -->
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        IMMOBILI
+      </p>
+      <p class="regular">
+        Dalla consultazione degli appositi archivi degli Uffici Catastali
+        Divisione Territorio, non sono state rilevate proprietà immobiliari
+        intestate al soggetto in esame (salvo visura ipocatastale).
+      </p>
+      <p
+        class="bold"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        RAPPORTI BANCARI
+      </p>
+      <p class="regular">
+        Le indagini condotte presso le principali fonti economico-patrimoniali
+        hanno come obiettivo la rilevazione di posizioni bancarie nelle
+        disponibilità del soggetto investigato. A partire dalla zona di
+        residenza di quest'ultimo, è stata condotta attività investigativa di
+        veriﬁca che ha portato alla luce un rapporto di tipo personale ed un
+        ulteriore conto intestato alla ditta individuale presso l'Istituto
+        indicato:
+      </p>
+
+      <p class="regular" style="background-color: #eeeeee">RAPPORTI ESTINTI</p>
+      <p
+        class="bold breakPage"
+        style="border-bottom: 2px solid #6e6e6e; margin-top: 40px"
+      >
+        UNICREDIT S.P.A.
+      </p>
+    </div>
+    <script>
+      function cutNumber(number, digitsAfterDot) {
+        const str = `${number}`;
+
+        return str.slice(0, str.indexOf(".") + digitsAfterDot + 1);
+      }
+      function getPageOfParagraph(nameDiv, numberOfBreak) {
+        const heightPage = 842;
+        var offsetHeight =
+          document.getElementsByTagName("html")[0].offsetHeight;
+        let offsetDiv = document.getElementById(nameDiv).offsetTop;
+        const pageNumber = offsetDiv / heightPage;
+        // const nuumberCut = cutNumber(Number(pageNumber), 0);
+        const result = Number(Number(pageNumber).toFixed(0)) + 1;
+        console.log(nameDiv + " -> " + result + " -> " + pageNumber);
+        return result;
+      }
+
+      const arrayOfIndex = [
+        "RIEPILOGO_INDAGINE",
+        "ANAGRAFICA_IMPRESA",
+        "REPERIBILITÁ",
+        "RECAPITI_TELEFONICI",
+        "CARICHE_IN_IMPRESE",
+        "ATTIVITÁ_LAVORATIVA",
+        "PARTECIPAZIONI_IN_IMPRESE",
+        "NEGATIVITÁ",
+        "INDAGINI_NEGOZIALI",
+        "VEICOLI",
+        "IMMOBILI",
+        "RAPPORTI_BANCARI",
+        "GIUDIZIO_RECUPERABILITÁ",
+      ];
+
+      for (let i = 0; i < arrayOfIndex.length; i++) {
+        let div = document.getElementsByClassName("contenuti__row__dx");
+        let p = div[i].getElementsByClassName("regular");
+        p.item(0).innerHTML = getPageOfParagraph(arrayOfIndex[i]);
+      }
+    </script>
+  </body>
+</html>
